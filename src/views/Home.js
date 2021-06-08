@@ -1,10 +1,16 @@
 import React from "react";
+import Header from "components/Header";
+
+import Ecommerce from "./examples/Ecommerce";
+import Footer from "components/Footer";
 
 function Home() {
   return (
-    <div>
-      <h1>Hola este es el home</h1>
-    </div>
+    <>
+      <Header />
+      {/* <Ecommerce /> */}
+      <Footer />
+    </>
   );
 }
 
