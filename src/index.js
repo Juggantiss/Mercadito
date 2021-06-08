@@ -1,19 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System PRO React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-pro-react
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
@@ -26,6 +10,7 @@ import "assets/demo/demo.css";
 import "assets/demo/react-demo.css";
 
 // presentation pages
+import Home from "views/Home.js";
 import Index from "views/Index.js";
 import Presentation from "views/Presentation.js";
 import Sections from "views/Sections.js";
@@ -52,6 +37,7 @@ import ChatPage from "views/examples/ChatPage.js";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
+      <Route exact path="/" render={(props) => <Home {...props} />} />
       <Route path="/index" render={(props) => <Index {...props} />} />
       <Route
         path="/presentation"
@@ -97,7 +83,7 @@ ReactDOM.render(
         render={(props) => <CheckoutPage {...props} />}
       />
       <Route path="/chat-page" render={(props) => <ChatPage {...props} />} />
-      <Redirect from="/" to="/presentation" />
+      <Redirect from="/" to="/" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
