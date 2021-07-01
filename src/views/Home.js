@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       <Header />
-      {/* <Ecommerce /> */}
+      <Ecommerce />
       <Footer />
     </>
   );

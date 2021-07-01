@@ -32,10 +32,6 @@ import {
   CarouselItem,
 } from "reactstrap";
 
-// core components
-import ColorNavbar from "components/Navbars/ColorNavbar.js";
-import DemoFooter from "components/Footers/DemoFooter.js";
-
 const items1 = [
   {
     content: (
@@ -209,7 +205,6 @@ export default function Ecommerce() {
 
   return (
     <>
-      <ColorNavbar />
       <div className="wrapper" ref={wrapper}>
         <div className="header header-1">
           <div className="page-header header-filter">
@@ -709,7 +704,6 @@ export default function Ecommerce() {
           </div>
         </div>
         {/* end-main-raised */}
-        <DemoFooter />
       </div>
     </>
   );
